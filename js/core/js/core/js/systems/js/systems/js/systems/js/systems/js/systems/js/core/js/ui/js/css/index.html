@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#12071f">
+  <title>Color Rush</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="app">
+
+    <!-- PANTALLA: MENÚ -->
+    <section class="screen" id="menu">
+      <div class="logo">
+        <span style="color:var(--rojo)">C</span><span style="color:var(--amarillo)">O</span><span style="color:var(--verde)">L</span><span style="color:var(--azul)">O</span><span style="color:var(--morado)">R</span>
+        <div style="font-size:30px;letter-spacing:8px;margin-top:6px;color:var(--dim)">RUSH</div>
+      </div>
+      <p class="tag">Tu cerebro te va a traicionar.<br>¿Confías en la <b>palabra</b>… o en el <b>color</b>?</p>
+      <button class="btn" id="playBtn">JUGAR</button>
+      <p class="tag" style="margin-top:22px">Récord: <b id="menuBest">0</b></p>
+    </section>
+
+    <!-- PANTALLA: JUEGO -->
+    <section class="screen hidden" id="game" style="justify-content:flex-start">
+      <div id="hud">
+        <div class="hudBox">PUNTOS<b id="score">0</b></div>
+        <div class="hudBox" style="text-align:right">NIVEL<b id="level">1</b></div>
+      </div>
+      <div id="combo"></div>
+      <div id="timerWrap"><div id="timerBar"></div></div>
+      <div id="rule" class="meaning">TOCA EL SIGNIFICADO</div>
+      <div id="word">ROJO</div>
+      <div id="grid">
+        <button class="tile" aria-label="opción 1"></button>
+        <button class="tile" aria-label="opción 2"></button>
+        <button class="tile" aria-label="opción 3"></button>
+        <button class="tile" aria-label="opción 4"></button>
+      </div>
+    </section>
+
+    <!-- PANTALLA: GAME OVER -->
+    <section class="screen hidden" id="over">
+      <p class="tag" style="letter-spacing:3px">PUNTUACIÓN</p>
+      <div id="finalScore">0</div>
+      <div id="newRecord"></div>
+      <div class="statRow">Mejor racha: <b id="finalCombo">0</b></div>
+      <div class="statRow">Récord: <b id="finalBest">0</b></div>
+      <button class="btn" id="retryBtn">JUGAR OTRA VEZ</button>
+    </section>
+
+    <div id="flash"></div>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
